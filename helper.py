@@ -1,7 +1,9 @@
 import os
 
 import cv2
-
+import matplotlib.pyplot as plt
+import numpy as np
+import itertools
 
 class ReadFromVideo(object):
     def __init__(self, video_path, sample_interval=1):
@@ -142,3 +144,65 @@ def draw_scores_onto_image(img_disp, scores, action_labels):
         cv2.putText(img_disp, text=s, org=(TXT_X, TXT_Y),
                     fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=FONT_SIZE,
                     color=(0, 0, int(COLOR_INTENSITY)), thickness=2)
+
+def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
+    plt.figure(figsize=(10,10))
+    if normalize:
+        cm = cm / cm.sum(axis=1)[:, np.newaxis]
+        #print("Normalized confusion matrix")
+    #else:
+        #print('Confusion matrix, without normalization')
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.title(title)
+
+    plt.colorbar()
+    tick_marks = np.arange(len(classes))
+    plt.xticks(tick_marks, classes, rotation=45)
+    plt.yticks(tick_marks, classes)
+
+    fmt = '.2f' if normalize else 'd'
+    thresh = cm.max() / 2.
+    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+        plt.text(j, i, format(cm[i, j], fmt), horizontalalignment="center", color="white" if cm[i, j] > thresh else "black")
+
+    plt.tight_layout()
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+    plt.show()
+
+
+
+def make_meshgrid(x, y, h=1309):
+    """Create a mesh of points to plot in
+
+    Parameters
+    ----------
+    x: data to base x-axis meshgrid on
+    y: data to base y-axis meshgrid on
+    h: stepsize for meshgrid, optional
+
+    Returns
+    -------
+    xx, yy : ndarray
+    """
+    x_min, x_max = x.min() - 1, x.max() + 1
+    y_min, y_max = y.min() - 1, y.max() + 1
+    ff, uu = np.meshgrid(np.linspace(x_min, x_max, h),
+                         np.linspace(y_min, y_max, h),
+                         indexing='xy')
+    return ff, uu
+
+
+def plot_contours(ax, clf, xx, yy, Z, **params):
+    """Plot the decision boundaries for a classifier.
+
+    Parameters
+    ----------
+    ax: matplotlib axes object
+    clf: a classifier
+    xx: meshgrid ndarray
+    yy: meshgrid ndarray
+    params: dictionary of params to pass to contourf, optional
+    """
+    out = ax.contourf(xx, yy, Z, **params)
+    return out
