@@ -1,0 +1,66 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[german]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Übungen Aktivitätserkennung}
+\author{Michael Knöferl \\E-Mail: \href{mailto:Michael.Knoeferl@sutdent.fhws.de}{Michael.Knoeferl@sutdent.fhws.de}} 
+
+\begin{document}
+\maketitle
+
+\section{Installation}
+
+Für diese Übung sollte keine Installation auf eurem System notwendig sein.\\ 
+Ihr könnte Sie über Google Colab ausführen. \\Hierzu wird jedoch ein Google Konto benötigt.\\
+Falls ihr dies nicht habt und keines anlegen wollt könntet ihr die Übung auch auf einem Linux System durchführen.\\
+Da hier aber dann mehrere Schritte nötig sind, führe ich dies hier nicht auf. Ihr könnt euch dann gerne an mich wenden und ich helfe euch bei der Installation.\\ \\ 
+Die Daten liegen auf Github:
+\\ \href{https://github.com/knoeferl/mi_seminar_uebung}{https://github.com/knoeferl/mi\_seminar\_uebung}\newline
+\\ 
+\\Öffnet die Datei:
+\\ \href{https://github.com/knoeferl/mi_seminar_uebung}{uebung\_action\_regognition.ipynb}\newline
+\newline
+\\Hier findet ihr einen Link der das Dokument in Google Colab öffnet.\newline
+ \href{https://colab.research.google.com/github/knoeferl/mi_seminar_uebung/blob/main/uebung_Aktivtaetserkennung.ipynb}{https://colab.research.google.com/github/knoeferl/mi\_seminar\_uebung/blob/main/uebung\_Aktivtaetserkennung.ipynb}
+\\
+\\Ihr könnt euch eine Instanz mit GPU holen und die Übung durchführen.
+\\Beim ersten ausführen kommt eine Warnung, dass das Dokument auf die Google Drive Daten zugreifen kann.
+\\ 
+\\Links könnt ihr auf ein Inhaltverzeichnis zugreifen um zu den einzelnen Übungen zu gelangen.
+\\ 
+\\Die Stellen an denen ihr Code einfügen sollt sind mit Kommentaren gekennzeichnet.
+
+\newpage
+\section{Übungen}
+
+\subsection{Schreibe ein LSTM}
+
+Im durch Kommentare gekenzeichneten Bereich schreibe ein Aufruf für die LSTM Funktion von Pytorch. \\ \\
+Doku LSTM:  \href{https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html}{https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html}\\ \\
+Hier könnt ihr mit der Anzahl der Hiddenlayer Spielen und sehen wie sich die Resultate verändern.\\
+Die Anzahl der Hiddenlayer muss bei der Linear Funktion als erster Parameter mit hineingeben werden.\\ \\
+Doku LINEAR: \href{https://pytorch.org/docs/stable/generated/torch.nn.Linear.html}{https://pytorch.org/docs/stable/generated/torch.nn.Linear.html}
+
+\subsection{LSTM laufen lassen}
+Hier könnt ihr die Anzahl der Epochen verändern und in den nachfolgenden Cellen betrachten wie sich die Resultate verändern.
+
+\subsection{Features berechnen} 
+\subsubsection{schreibe die Funktion calc\_angle welcher die Winkel veränderung zwischen zwei Bildern zurück gibt} 
+\subsubsection{schreibe die Funktion calc\_euclidan welche den Euklisichen Abstand zwischen zwei Punkten zurück gibt} 
+
+\subsection{Ändere den reularization Parameter und betrachte wie sich die Resultate verändern}
+
+Doku SVM: \href{https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html}{https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html}
+
+\end{document}
