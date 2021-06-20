@@ -24,7 +24,8 @@ https://github.com/knoeferl/mi_seminar_uebung
 
 https://github.com/knoeferl/mi_seminar_uebung
 
-Hier findet ihr einen Link der Das Dokument in Google Colab öffnet.
+Hier findet ihr einen Link der das Dokument in Google Colab öffnet.
+https://colab.research.google.com/github/knoeferl/mi_seminar_uebung/blob/main/uebung_Aktivtaetserkennung.ipynb
 
 Ihr könnt euch eine Instanz mit GPU holen und die Übung durchführen.
 
