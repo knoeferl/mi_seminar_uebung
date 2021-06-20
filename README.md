@@ -8,7 +8,7 @@ Michael.Knoeferl@sutdent.fhws.de
 
 ## Installation
 
-Für diese Übung sollte keine Installation auf euerem System notwendig sein.
+Für diese Übung sollte keine Installation auf eurem System notwendig sein.
 
 Ihr könnte Sie über Google Colab ausführen. 
 
@@ -53,5 +53,11 @@ Doku LINEAR: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
 Hier könnt ihr die Anzahl der Epochen verändern und in den nachfolgenden Cellen betrachten wie sich die Resultate verändern.
 
 ## Aufgabe 3: Features berechnen
+
 ### a) schreibe die Funktion calc_angle welcher  die Winkel veränderung zwischen zwei Bildern zurück gibt
+
 ### b) schreibe die Funktion calc_euclidan welche den Euklisichen Abstand zwischen zwei Punkten zurück gibt
+
+## Aufgabe 4: Ändere den reularization Parameter und betrachte wie sich die Resultate verändern
+
+Doku SVM: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
