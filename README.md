@@ -40,24 +40,29 @@ Die Stellen an dennen ihr Code einfügen sollt sind mit Kommentaren gekennzeichn
 
 ### Aufgabe 1: Schreibe ein LSTM
 
-Im durch Kommentare gekenzeichneten Bereich schreibe ein Aufruf für die LSTM Funktion von Pytorch.
+Im durch Kommentare gekennzeichneten Bereich schreibe ein Aufruf für die LSTM Funktion von Pytorch.
 
 Doku LSTM: https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html
 
 Ihr könnte hier mit der Anzahl der Hiddenlayer Spielen und sehen wie sich die Resultate verändern.
-Die Anzahl der Hiddenlayer muss bei der Linear Funktion als erster Parameter mit hineingeben werden.
+Die Anzahl der Hiddenlayer muss bei der Linear Funktion als erster Parameter mit hinein geben werden.
 
 Doku LINEAR: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
 
-## Aufgabe 2: LSTM laufen lassen
+### Aufgabe 2: LSTM laufen lassen
 Hier könnt ihr die Anzahl der Epochen verändern und in den nachfolgenden Cellen betrachten wie sich die Resultate verändern.
 
-## Aufgabe 3: Features berechnen
+### Aufgabe 3: Features berechnen
 
-### a) schreibe die Funktion calc_angle welcher  die Winkel veränderung zwischen zwei Bildern zurück gibt
+#### a) schreibe die Funktion calc_angle welche die Winkelveränderung zwischen zwei Bildern zurück gibt
 
-### b) schreibe die Funktion calc_euclidan welche den Euklisichen Abstand zwischen zwei Punkten zurück gibt
+#### b) schreibe die Funktion calc_euclidan welche den Euklisichen Abstand zwischen zwei Punkten zurück gibt
 
-## Aufgabe 4: Ändere den reularization Parameter und betrachte wie sich die Resultate verändern
+### Aufgabe 4: Ändere den Regulierungsparameter C und betrachte wie sich die Resultate verändern
 
 Doku SVM: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+
+## Erwähnungen
+Übungen basieren auf diesem Artikel https://blog.etereo.io/detecting-poses-with-openpose-in-google-colab-d591dc8d8609, diesem Repo https://github.com/shah-deven/Action-Classification-using-CNN-and-LSTM
+und den Pytorch Beispielen zu LSTM und den Scikit-learn Beispielen zu SVM die es auf den offiziellen Seiten zu finden sind.
+
